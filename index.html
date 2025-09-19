@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAMPER PET</title>
+    <!-- goole font ADLaM+Display-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font sora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- custome color tailwind -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+        --color-golden: rgba(255, 220, 38, 1);
+        --color-golden-light: rgba(255, 249, 244, 1);
+        --font-sora: "Sora", sans-serif;
+        --font-ADLaM-Display: "ADLaM Display", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav section start hare -->
+    <header>
+      <nav class="bg-golden-light shadow-md">
+        <div class="max-w-[85%] mx-auto flex justify-between items-center p-4">
+          <!-- Logo -->
+          <div class="flex items-center space-x-2">
+            <img src="./c1-assets/logo-header.png" alt="logo" class="w-8 h-8" />
+            <a href="">
+              <span class="font-sora font-medium text-lg">
+                Browse<span class="text-golden">4</span>Pets
+              </span>
+            </a>
+          </div>
+
+          <!-- Menu (Desktop/Tablet) -->
+          <div class="hidden md:flex">
+            <ul class="flex space-x-6 font-medium text-gray-700">
+              <li><a href="#" class="hover:text-golden">Contact us</a></li>
+              <li><a href="#" class="hover:text-golden">Breeds</a></li>
+              <li><a href="#" class="hover:text-golden">Find a pet</a></li>
+            </ul>
+          </div>
+
+          <!-- Right Side (Desktop/Tablet) -->
+          <div class="hidden md:flex items-center gap-4">
+            <button class="text-gray-700 hover:text-golden">
+              <i data-feather="bell"></i>
+            </button>
+            <button class="text-gray-700 hover:text-golden">
+              <i data-feather="search"></i>
+            </button>
+            <button
+              class="px-4 py-1 rounded border border-golden hover:bg-golden font-medium"
+            >
+              Login
+            </button>
+            <button
+              class="px-4 py-1 rounded bg-golden text-black font-medium hover:bg-yellow-400"
+            >
+              Sign up
+            </button>
+          </div>
+
+          <!-- Hamburger (Mobile) -->
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-gray-800">
+              <i data-feather="menu"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden bg-golden-light border-t border-gray-300"
+        >
+          <ul class="flex flex-col space-y-2 p-4 font-medium text-gray-700">
+            <li><a href="#" class="hover:text-golden">Contact us</a></li>
+            <li><a href="#" class="hover:text-golden">Breeds</a></li>
+            <li><a href="#" class="hover:text-golden">Find a pet</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+
+      // Toggle mobile menu
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
 </html>
